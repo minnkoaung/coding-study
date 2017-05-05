@@ -68,6 +68,13 @@
         */
         $("#left-well").children().css("color", "blue");
 
+        /*
+            jQuery uses CSS Selectors to target elements. 
+            target:nth-child(n) css selector allows you to select all the nth elements with the target class or 
+            element type.
+        */
+        $(".target:nth-child(2)").addClass("animated bounce");
+
 
     });
 </script>
