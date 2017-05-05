@@ -19,6 +19,23 @@
             //jQuery has a function called .remove() that will remove an HTML element entirely
             $("#target4").remove();
 
+            //jQuery has a function called appendTo() that allows you to select HTML elements and append them to another element.
+            $("#target2").appendTo("#right-well");
+
+            //jQuery has a function called clone() that makes a copy of an element
+            /*  Did you notice this involves sticking two jQuery functions together? 
+             *  This is called function chaining and
+             *  it's a convenient way to get things done with jQuery.
+             */
+            $("#target5").clone().appendTo("#left-well");
+
+            /*
+                Every HTML element has a parent element from which it inherits properties.
+                jQuery has a function called parent() that allows you to access the parent of whichever element you've selected.
+            */
+
+            $("#target1").parent().css("background-color", "blue");
+
 
         });
     </script>
