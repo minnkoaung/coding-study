@@ -10,38 +10,6 @@
 </head>
 
 <body>
-    <script>
-        $(document).ready(function() {
-            $("#target1").css("color", "red");
-            //.prop function are added additional function to its css
-            $("#target1").prop("disabled", true);
-
-            //jQuery has a function called .remove() that will remove an HTML element entirely
-            $("#target4").remove();
-
-            //jQuery has a function called appendTo() that allows you to select HTML elements and append them to another element.
-            $("#target2").appendTo("#right-well");
-
-            //jQuery has a function called clone() that makes a copy of an element
-            /*  Did you notice this involves sticking two jQuery functions together? 
-             *  This is called function chaining and
-             *  it's a convenient way to get things done with jQuery.
-             */
-            $("#target5").clone().appendTo("#left-well");
-
-            /*
-                Every HTML element has a parent element from which it inherits properties.
-                jQuery has a function called parent() that allows you to access the parent of whichever element you've selected.
-            */
-
-            $("#target1").parent().css("background-color", "blue");
-
-
-        });
-    </script>
-
-    <!-- Only change code above this line. -->
-
     <div class="container-fluid">
         <h3 class="text-primary text-center">jQuery Playground</h3>
         <div class="row">
@@ -67,6 +35,41 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</script>
+
+<script>
+    $(document).ready(function() {
+        $("#target1").css("color", "red");
+        //.prop function are added additional function to its css
+        $("#target1").prop("disabled", true);
+
+        //jQuery has a function called .remove() that will remove an HTML element entirely
+        $("#target4").remove();
+
+        //jQuery has a function called appendTo() that allows you to select HTML elements and append them to another element.
+        $("#target2").appendTo("#right-well");
+
+        //jQuery has a function called clone() that makes a copy of an element
+        /*  Did you notice this involves sticking two jQuery functions together? 
+         *  This is called function chaining and
+         *  it's a convenient way to get things done with jQuery.
+         */
+        $("#target5").clone().appendTo("#left-well");
+
+        /*
+            Every HTML element has a parent element from which it inherits properties.
+            jQuery has a function called parent() that allows you to access the parent of whichever element you've selected.
+        */
+        $("#target1").parent().css("background-color", "blue");
+
+        /*
+            Many HTML elements have children which inherit their properties from their parent HTML elements.
+            jQuery has a function called children() that allows you to access the children of whichever element you've selected.
+        */
+        $("#left-well").children().css("color", "blue");
+
+
+    });
 </script>
 
 </html>
